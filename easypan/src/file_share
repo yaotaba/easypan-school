@@ -1,0 +1,15 @@
+-- auto-generated definition
+create table file_share
+(
+    share_id    varchar(20) not null comment '分享ID'
+        primary key,
+    file_id     varchar(10) null comment '文件ID',
+    user_id     varchar(15) null comment '分享人ID',
+    valid_type  tinyint(1)  null comment '有效期类型 0：一天，1：7天，2：30天，3：永久有效',
+    expire_time datetime    null comment '失效时间',
+    share_time  datetime    null comment '分享时间',
+    code        varchar(5)  null comment '提取码',
+    show_count  int         null comment '浏览次数'
+)
+    comment '分享信息';
+

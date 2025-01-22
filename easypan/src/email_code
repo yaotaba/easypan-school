@@ -1,0 +1,11 @@
+-- auto-generated definition
+create table email_code
+(
+    email       varchar(150) not null comment '邮箱',
+    code        varchar(5)   not null comment '验证码',
+    create_time datetime     null comment '创建时间',
+    status      int          null comment '状态0：未使用，1：已使用',
+    primary key (email, code)
+)
+    comment '邮箱验证码';
+
